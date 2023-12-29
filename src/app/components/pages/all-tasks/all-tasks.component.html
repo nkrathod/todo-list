@@ -1,0 +1,14 @@
+<div class="flex mt-6">
+    <input type="text" placeholder="Add Tudo" class="border-gray-100 p-2 w-96 shadow-md rounded border-2"
+        [(ngModel)]="newTask" (keydown.enter)="addTudo()" />
+</div>
+<div class="mt-6">
+    <h1 class="font-bold text-xl w-full">My Tudos</h1>
+    <div class="grid grid-cols-4 gap-4 mt-4 w-full">
+        @for (todo of tudoList; track todo) {
+        <app-tudo-card [todo]="todo" (important)="onImportant($event)" (unimportant)="onUnImportant($event)"
+            (complete)="onComplete($event)" (uncomplete)="onUnComplete($event)"
+            (delete)="onDelete($event)"></app-tudo-card>
+        }
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<aside class="fixed top-17 w-80 bg-fuchsia-50 h-screen shadow-lg">
+    <ul>
+        <li [routerLink]="'/'" class="p-4 cursor-pointer text-fuchsia-500"
+            routerLinkActive="bg-fuchsia-100 border-l-4 border-fuchsia-400 font-bold" [routerLinkActiveOptions]="{exact: true}">
+            All</li>
+        <li [routerLink]="'/importants'" class="p-4 cursor-pointer text-fuchsia-500"
+            routerLinkActive="bg-fuchsia-100 border-l-4 border-fuchsia-400 font-bold">Important</li>
+        <li [routerLink]="'/completed'" class="p-4 cursor-pointer text-fuchsia-500"
+            routerLinkActive="bg-fuchsia-100 border-l-4 border-fuchsia-400 font-bold">Completed</li>
+    </ul>
+</aside>
